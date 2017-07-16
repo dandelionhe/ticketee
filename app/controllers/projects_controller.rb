@@ -1,6 +1,6 @@
 class ProjectsController < ApplicationController
 	before_action :set_project,only:[:show]
-	
+
 	def index
 
 	end
@@ -15,7 +15,7 @@ class ProjectsController < ApplicationController
 			flash[:success] = 'Project has been created.'
 			redirect_to @project
 		else
-			flash[:danger] = 'Project can not be created.'
+			flash.now[:danger] = 'Project has not been created.'
 			render 'new'
 		end
 	end
