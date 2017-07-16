@@ -2,5 +2,5 @@
 
 <%= @project.name %>
 <%= @project.description %>
-<%= link_to 'Edit Project',edit_project_path(@project) %>
-<%= link_to 'Delete Project',@project,method: :delete,data: { confirm: 'You sure?' } %>
+<%= link_to 'Edit Project',edit_project_path(@project),class: "edit" %>
+<%= link_to 'Delete Project',@project,method: :delete,data: { confirm: 'You sure?' },class: "delete" %>

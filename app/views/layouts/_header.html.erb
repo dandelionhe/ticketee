@@ -13,12 +13,10 @@
         <!-- Collect the nav links, forms, and other content for toggling -->
         <div class="collapse navbar-collapse" id="navbar">
             <ul class="nav navbar-nav">
-                <li class="active">
+                <li class="<%= 'active' if current_page?('/') %>">
                     <%= link_to "Home",root_path %>
                 </li>
-                <li>
-                    <a href="#"></a>
-                </li>
+
 
             </ul>
             <form class="navbar-form navbar-left" role="search">
@@ -40,10 +38,7 @@
                     </a>
                     <ul class="dropdown-menu">
 
-                        <li>
 
-
-                        </li>
                     </ul>
                 </li>
 

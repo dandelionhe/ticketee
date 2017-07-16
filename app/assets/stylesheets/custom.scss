@@ -10,3 +10,51 @@
     text-decoration: none;
   }
 }
+
+.page-header{
+  position: relative;
+  padding-bottom: 0px;
+  &:first-child{
+    margin-top: 20px;
+  }
+}
+
+.actions{
+  @extend .list-unstyled;
+  @extend .list-inline;
+  position:absolute;
+  bottom: -2px;
+  right: 2px;
+  max-width: 45%;
+  text-align: right;
+}
+
+// button
+a.new,a.edit,a.delete{
+  @extend .btn;
+  &:before{
+    font-family: 'FontAwesome';
+    padding-right: .5 * $padding;
+  }
+}
+
+a.new{
+  @extend .btn-primary;
+  &:before{
+    @extend .fa-plus;
+  }
+}
+
+a.edit{
+  @extend .btn-default;
+  &:before{
+    @extend .fa-pencil;
+  }
+}
+
+a.delete{
+  @extend .btn-danger;
+  &:before{
+    @extend .fa-trash;
+  }
+}
