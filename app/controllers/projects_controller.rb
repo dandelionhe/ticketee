@@ -1,5 +1,5 @@
 class ProjectsController < ApplicationController
-	before_action :set_project,only:[:show]
+	before_action :set_project,only:[:show,:edit,:update,:destroy]
 
 	def index
 		@projects = Project.all
@@ -22,6 +22,26 @@ class ProjectsController < ApplicationController
 
 	def show
 
+	end
+
+	def edit
+
+	end
+
+	def update
+		if @project.update(project_params)
+			flash[:success] = 'Project has been updated.'
+			redirect_to @project
+		else
+			flash[:danger] = 'Project has not been updated.'
+			render 'edit'
+		end
+	end
+
+	def destroy
+		@project.destroy
+		flash[:success] = 'Project has been deleted.'
+		redirect_to projects_path
 	end
 
 	private
