@@ -1,5 +1,4 @@
 @import "variables";
-@import 'flat-ui';
 
 // rails g devise:views:locale it
 // run above code to generate bootstrap view for devise
@@ -46,7 +45,7 @@ a.new{
 }
 
 a.edit{
-  @extend .btn-default;
+  @extend .btn-success;
   &:before{
     @extend .fa-pencil;
   }
@@ -57,4 +56,10 @@ a.delete{
   &:before{
     @extend .fa-trash;
   }
+}
+
+// Form
+
+form{
+  max-width: 500px;
 }

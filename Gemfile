@@ -16,9 +16,8 @@ gem 'jbuilder'
 gem 'jquery-rails'
 gem 'simple_form'
 gem 'will_paginate'
-gem "flat-ui-rails"
 gem 'awesome_rails_console'
-
+gem 'devise'
 
 group :development, :test do
   gem 'sqlite3', '1.3.12'
