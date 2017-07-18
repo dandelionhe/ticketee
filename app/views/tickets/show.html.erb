@@ -6,5 +6,6 @@
 		<h2><%= @ticket.name %></h2>
 	</header>
 	<%= simple_format(@ticket.description) %>
-	<%= link_to 'Edit Ticket',edit_project_ticket_path(@project) %>
+	<%= link_to 'Edit Ticket',edit_project_ticket_path(@project),class: "edit" %>
+	<%= link_to 'Delete Ticket',[@project,@ticket],method: :delete,class: "delete" %>
 </div>
