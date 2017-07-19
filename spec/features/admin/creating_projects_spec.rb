@@ -2,13 +2,12 @@ require "rails_helper"
 
 RSpec.feature 'Users can create new project' do
 	before do
+		login_as(FactoryGirl.create(:user,:admin))
 		visit '/'
 		click_link 'New Project'
 	end
 
 	scenario 'with valid attributes' do
-
-
 		fill_in 'Name',with:'Sublime Text 3'
 		fill_in 'Description',with:'A text editor for everyone.'
 		click_button 'Create Project'

@@ -4,7 +4,9 @@
 	<%= @project.name %>
 	<%= @project.description %>
 	<%= link_to 'Edit Project',edit_project_path(@project),class: "edit" %>
-	<%= link_to 'Delete Project',@project,method: :delete,data: { confirm: 'You sure?' },class: "delete" %>
+	<% admin_only do %>
+	<%= link_to 'Delete Project',admin_project_path(@project),method: :delete,data: { confirm: 'You sure?' },class: "delete" %>
+	<% end %>
 	<br>
 	<br>
 	<%= link_to 'New Ticket',new_project_ticket_path(@project),class: "new"%>
