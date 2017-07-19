@@ -1,0 +1,17 @@
+<div class="col-md-4">
+	
+		<h1>Users</h1>
+		<ul class="actions">
+			<li>
+				<%= link_to 'New User',new_admin_user_path,class: "new" %>
+			</li>
+		</ul>
+
+</div>
+<div class="col-md-4">
+	<ul>
+		<% @users.each do |user| %>
+		<li><%= link_to user.email,[:admin,user] %></li>
+		<% end %>
+	</ul>
+</div>
