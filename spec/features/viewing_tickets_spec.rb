@@ -8,6 +8,8 @@ RSpec.feature 'Users can view ticket' do
 		ie = FactoryGirl.create(:project,name:'Internet Explorer')
 		FactoryGirl.create(:ticket,project:ie,name:'Standards compliance',description:"Isn't a joke.",author:author)
 
+		login_as(author)
+		assign_role!(author,:viewer,sublime)
 		visit '/'
 	end
 

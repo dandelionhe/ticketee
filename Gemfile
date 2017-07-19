@@ -18,6 +18,7 @@ gem 'simple_form'
 gem 'will_paginate'
 gem 'awesome_rails_console'
 gem 'devise'
+gem 'pundit'
 
 group :development, :test do
   gem 'sqlite3', '1.3.12'
